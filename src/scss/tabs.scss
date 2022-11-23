@@ -1,0 +1,131 @@
+.tabs {
+
+    // .tabs__titles
+    &__titles {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding: 10px 30px 0;
+        background-color: $primary;
+
+        @media (max-width: $breakpoint992) {
+            &:not(.tabs__titles-menumobile) {
+                display: flex;
+                flex-direction: column;
+                background-color: unset;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: $breakpoint480) {
+            padding: 10px 20px 0;
+        }
+    }
+
+    // .tabs__title
+    &__title {
+        padding: 10px 30px;
+        color: $white;
+        cursor: pointer;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+
+        & > span > img {
+            display: none;
+        }
+
+        &.active {
+            background-color: $white;
+            color: $primary;
+        }
+
+        @media (max-width: $breakpoint992) {
+            font-size: 14px;
+            line-height: 18px;
+
+            &:not(.tabs__title-menumobile) {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                border: 1px solid $gray;
+                color: $primary;
+    
+                &.active img.tab__close {
+                    display: block;
+                }
+    
+                &:not(.active) img.tab__open {
+                    display: block;
+                }
+    
+                &.active {
+                    background-color: unset;
+    
+                    .tab__inner {
+                        display: block;
+                    }
+                }
+            }
+            
+
+        }
+
+        @media (max-width: $breakpoint480) {
+            padding: 10px 20px;
+        }
+
+        .tab__inner {
+            display: none;
+            flex: 0 0 100%;
+            margin-top: 10px;
+            transition: 0.3s ease;
+        }
+
+    }
+}
+
+.tab {
+
+    padding: 20px;
+    border: 1px solid $gray;
+    border-top: none;
+
+    display: none;
+    &.active {
+        display: block;
+    }
+
+    @media (max-width: $breakpoint992) {
+        &:not(.tab-menumobile){
+            display: none;
+            &.active {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.tab__text {
+
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $black;
+
+    @media (max-width: $breakpoint992) {
+        font-size: 14px;
+    }
+
+}

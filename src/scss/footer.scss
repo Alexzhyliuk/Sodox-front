@@ -1,0 +1,101 @@
+footer {
+    background: #C5C6C6;
+}
+
+.footer {
+
+        padding: 112px 0 245px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+
+        @media (max-width: $breakpoint992) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 50px 0 50px;
+        }
+
+		// .footer__item
+		&__item {
+            &:first-child {
+                margin-right: auto;
+            }
+            flex: 0 1 270px;
+		}
+
+		// .footer__logo
+		&__logo {
+            max-width: 250px;
+            img {
+                max-width: 100%;
+            }
+		}
+
+		// .footer__item-title
+		&__item-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 21.328px;
+            line-height: 26px;
+            color: $secondary;
+            margin-bottom: 34px;
+		}
+
+		// .footer__list
+		&__list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+		}
+
+		// .footer__list-link
+		&__list-link {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 170%;
+            text-transform: capitalize;
+            color: $secondary;
+            display: flex;
+            align-items: center;
+            transition: .3s color;
+
+            &:hover {
+                color: $primary;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+		}
+
+		// .footer__text
+		&__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: $secondary;
+
+		}
+}
+
+.copy {
+    background: $secondary;
+    padding: 35px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // .copy__text
+    &__text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.03em;
+        color: #FEFEFE;
+		}
+}

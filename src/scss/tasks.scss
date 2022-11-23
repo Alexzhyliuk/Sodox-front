@@ -1,0 +1,135 @@
+.section {
+
+    // .section__tasks
+    &__tasks {
+        padding: 160px 0 240px;
+        @media (max-width: $breakpoint1200) {
+            padding: 170px 60px 130px;
+        }
+        @media (max-width: $breakpoint480) {
+            padding: 64px 0;
+        }
+    }
+
+}
+
+.tasks {
+
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+
+    @media (max-width: $breakpoint1200) {
+        flex-direction: column;
+        align-items: unset;
+        gap: 60px;
+    }
+    @media (max-width: $breakpoint480) {
+        gap: 10px;
+    }
+
+    // .tasks__item
+    &__item {
+        &.left__item {
+            flex: 0 0 472px;
+            @media (max-width: $breakpoint1200) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+
+    // .tasks__title
+    &__title {
+        color: $black;
+    }
+
+    // .tasks__info
+    &__info {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: $secondary;
+        margin-top: 24px;
+    }
+
+    // .tasks__img
+    &__img {
+        margin-top: 40px;
+
+        @media (max-width: $breakpoint1200) {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+
+            @media (max-width: $breakpoint1200) {
+                height: 1000px;
+            }
+            @media (max-width: $breakpoint768) {
+                height: 600px;
+            }
+        }
+    }
+
+    // .tasks__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 639px;
+        @media (max-width: $breakpoint1450) {
+            max-width: 100%;
+        }
+        @media (max-width: $breakpoint768) {
+            gap: 20px;
+        }
+    }
+
+    // .tasks__list-item
+    &__list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        @media (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+    }
+
+    // .tasks__list-number
+    &__list-number {
+        margin-right: 22px;
+        flex: 0 0 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $primary;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: capitalize;
+        font-family: 'Inter', sans-serif;
+        @media (max-width: $breakpoint768) {
+            width: 60px;
+            margin-right: 0;
+            margin-bottom: 22px;
+        }
+    }
+
+    // .tasks__list-text
+    &__list-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: $secondary;
+    }
+}

@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gotham;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: calc($conteinerWidth + 2 * $containerPadding);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerPadding;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+// Animation
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    color: $white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 170%;
+    text-transform: uppercase;
+    transition: .3s background-color;
+
+    &:hover {
+        background: lighten($primary, 4%);
+    }
+
+    @media (max-width: $breakpoint992) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &-arrow {
+        font-family: "Raleway", sans-serif;
+        padding: 16px 32px;
+        
+        img {
+            margin-left: 10px;
+            transition: .3s transform;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px 15px 10px 43px;
+    border: 1px solid #C5C6C6;
+    outline: none;
+    color: $secondary;
+
+    &::placeholder {
+        color: $darkGray;
+    }
+}
+
+textarea {
+    border: 1px solid #C5C6C6;
+    outline: none;
+    color: $secondary;
+    padding: 10px 15px;
+    resize: none;
+
+    &::placeholder {
+        color: $darkGray;
+    }
+}
+
+.section {
+        // .section__subtitle
+        &__subtitle {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 130%;
+            color: $primary;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    
+        // .section__title
+        &__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 140%;
+            text-align: center;
+            color: $secondary;
+
+            span {
+                color: $primary;
+            }
+
+            @media (max-width: $breakpoint480) {
+                font-size: 28px;
+            }
+        }
+}
+
+.title__left {
+    text-align: left;
+}

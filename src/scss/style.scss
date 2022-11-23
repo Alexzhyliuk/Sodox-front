@@ -1,0 +1,32 @@
+@import "fonts";
+@import "vars";
+@import "global";
+@import "navbar";
+@import "header";
+
+// Main
+@import "hero";
+@import "about";
+@import "contact_form";
+@import "service";
+@import "tasks";
+@import "products";
+@import "customers";
+@import "company";
+@import "footer";
+@import "tabs";
+
+// Catalog
+@import "catalog/catalog";
+
+// Contacts
+@import "contacts/contacts";
+
+// Product
+@import "product/product";
+
+// Series
+@import "catalog/series";
+
+// Swiper
+@import "swiper";

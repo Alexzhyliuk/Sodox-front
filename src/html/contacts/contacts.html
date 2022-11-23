@@ -1,0 +1,136 @@
+<script>
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+
+            center: [52.42, 31.00],
+            zoom: 10
+        });
+
+        var office = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [52.42101, 30.88539] // координаты точки
+            }
+        });
+
+        myMap.geoObjects.add(office);
+    }
+</script>
+<section class="section__contacts">
+    <div class="container">
+        <div class="contacts">
+            <div class="contact contacts__item">
+                <h3 class="contact__title">Контакты</h3>
+                <div class="contact__text">
+                    ПОСЕТИТЕ НАШ ОФИС В ГОМЕЛЕ И МОСКВЕ! <br>
+                    220055, г. Гомель, ул. Каменногорская, 4, к. 15 <br>
+                    220055, г. Москва, ул. Красная, 4, к. 15
+                    <br><br>
+                    Наш телефон: +375 29 637-02-97 А1</div>
+                <div class="contact__icons">
+                    <a href="#" class="contact__icon">
+                        <img src="@img/whatsapp.svg" alt="">
+                    </a>
+                    <a href="#" class="contact__icon">
+                        <img src="@img/viber.svg" alt="">
+                    </a>
+                    <a href="#" class="contact__icon">
+                        <img src="@img/telegram.svg" alt="">
+                    </a>
+                    <a href="#" class="contact__icon">
+                        <img src="@img/insta.png" alt="">
+                    </a>
+                    <a href="#" class="contact__icon">
+                        <img src="@img/youtube.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="map contacts__item" id="map">
+                <!-- Yandex Map -->
+            </div>
+            <div class="faq contacts__item">
+                <h4 class="section__title"><span>Часто задаваемые вопросы</span></h4>
+                <div class="faq__text">Nulla lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt. </div>
+                <div class="faq__questions">
+                    <div class="question open">
+                        <div class="question__title">
+                            <span>What Is Architecture</span>
+                            <img src="@img/plus.svg" alt="" class="question__open">
+                            <img src="@img/minus.svg" alt="" class="question__close">
+                        </div>
+                        <div class="question__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            Getting Started
+                            <img src="@img/plus.svg" alt="" class="question__open">
+                            <img src="@img/minus.svg" alt="" class="question__close">
+                        </div>
+                        <div class="question__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            How to Choice Pricing Plan
+                            <img src="@img/plus.svg" alt="" class="question__open">
+                            <img src="@img/minus.svg" alt="" class="question__close">
+                        </div>
+                        <div class="question__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            How to get Discount
+                            <img src="@img/plus.svg" alt="" class="question__open">
+                            <img src="@img/minus.svg" alt="" class="question__close">
+                        </div>
+                        <div class="question__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="application contacts__item">
+                <h4 class="section__title"><span>Оставьте заявку</span></h4>
+                <form action="" class="form__application">
+                    <div class="form__row">
+                        <label class="form__label">
+                            <div class="form__input">
+                                <input class="required" type="text" placeholder="Ваше Имя *">
+                            </div>
+                        </label>
+                        <label class="form__label">
+                            <div class="form__input">
+                                <input type="email" placeholder="E-mail">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label">
+                            <div class="form__input">
+                                <input class="required" type="tel" placeholder="Ваш телефон *">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label">
+                            <div class="form__input">
+                                <textarea placeholder="Ваше сообщение"></textarea>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-arrow form__submit">
+                        ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ
+                        <img src="@img/arrow.svg" alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,246 @@
+.section {
+
+    // .section__contacts
+    &__contacts {
+        padding: 56px 0;
+
+        @media (max-width: $breakpoint480) {
+            padding: 26px 0;
+        }
+    }
+
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    &__item {
+        flex: 0 1 600px;
+    }
+}
+
+.contact {
+
+    // .contact__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: $primary;
+
+        @media (max-width: $breakpoint480) {
+            font-size: 32px;
+        }
+    }
+
+    // .contact__text
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: $black;
+        margin-top: 20px;
+    }
+
+    // .contact__icons
+    &__icons {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    // .contact__icon
+    &__icon {
+        height: 45px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+}
+
+.map {
+    height: 330px;
+    @media (max-width: $breakpoint992) {
+        min-height: 160px;
+        width: 100%;
+    }
+}
+
+.faq {
+
+    // .faq__text
+    &__text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: #666666;
+        text-align: center;
+        margin-top: 32px;
+
+        @media (max-width: $breakpoint992) {
+            text-align: left;
+        }
+        @media (max-width: $breakpoint480) {
+            margin-top: 20px;
+        }
+    }
+
+    // .faq__questions
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 40px;
+
+        @media (max-width: $breakpoint480) {
+            gap: 10px;
+        }
+    }
+}
+
+.question {
+
+    padding: 14px 16px;
+    border: 1px solid $gray;
+    cursor: pointer;
+
+    &__close {
+        display: none;
+    }
+
+
+    &.open {
+        .question__close {
+            display: block;
+        }
+
+        .question__open {
+            display: none;
+        }
+
+        .question__text {
+            display: block;
+        }
+    }
+
+    // .question__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21.328px;
+        line-height: 26px;
+        color: $primary;
+
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $breakpoint480) {
+            font-size: 18px;
+        }
+    }
+
+    // .question__text
+    &__text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: #666666;
+        margin-top: 6px;
+        display: none;
+    }
+}
+
+.application {
+    .form {
+
+        // .form__application
+        &__application {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        &__row {
+            display: flex;
+
+            &:first-child {
+                gap: 10px;
+
+                @media (max-width: $breakpoint480) {
+                    flex-direction: column;
+                }
+            }
+        }
+    
+        // .form__label
+        &__label {
+            width: 100%;
+        }
+    
+        // .form__input
+        &__input {
+            input {
+                width: 100%;
+                padding: 13px 20px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 170%;
+                color: $black;
+
+
+                &::placeholder {
+                    // text-transform: capitalize;
+                    color: #666666;
+                }
+
+                // &.required {
+                //     &::placeholder {
+                        
+                //     }
+                // }
+            }
+
+            textarea {
+                width: 100%;
+                padding: 13px 20px;
+                height: 110px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 170%;
+                color: $black;
+
+                &::placeholder {
+                    color: #666666;
+                }
+            }
+        }
+    
+        // .form__submit
+        &__submit {
+            margin-top: 27px;
+            max-width: fit-content;
+
+            @media (max-width: $breakpoint480) {
+                max-width: 100%;
+            }
+        }
+    }    
+}
+
+
