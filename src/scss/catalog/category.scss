@@ -1,0 +1,132 @@
+.section__category {
+
+    .category {
+
+        margin-top: 40px;
+    
+        @media (max-width: $breakpoint768) {
+            margin-top: 20px;
+        }
+    
+        // .category__text
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: $black;
+            margin-top: 10px;
+    
+            @media (max-width: $breakpoint992) {
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+    
+        // .category__tabs
+        &__tabs {
+            margin-top: 40px;
+    
+            @media (max-width: $breakpoint768) {
+                margin-top: 20px;
+            }
+        }
+    
+        // .category__items
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+    
+            margin-top: 60px;
+    
+            @media (max-width: $breakpoint992) {
+                margin-top: 40px;
+            }
+        }
+    
+        // .category__item
+        &__item {
+
+            &.hidden {
+                display: none;
+            }
+            
+            flex: 1 0 248px;
+            max-width: calc(50% - 15px);
+    
+            @media (max-width: $breakpoint480) {
+                max-width: unset;
+            }
+    
+        }
+    
+        // .category__item-img
+        &__item-img {
+            border: 1px solid #666665;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 272px;
+    
+            @media (max-width: $breakpoint480) {
+                padding: 5px 10px;
+            }
+    
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    
+        // .category__item-title
+        &__item-title {
+            text-align: center;
+            margin-top: 10px;
+    
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $secondary;
+    
+            @media (max-width: $breakpoint992) {
+                font-size: 14px;
+            }
+        }
+    
+        &__btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            background: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 170%;
+            color: $primary;
+            text-transform: uppercase;
+    
+            margin-top: 30px;
+
+            &.hidden {
+                display: none;
+            }
+
+            &-hide {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    
+    
+    }
+}
+

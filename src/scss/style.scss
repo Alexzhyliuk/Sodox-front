@@ -18,15 +18,15 @@
 
 // Catalog
 @import "catalog/catalog";
+@import "catalog/category";
+@import "catalog/categories";
+@import "catalog/subcategory";
 
 // Contacts
 @import "contacts/contacts";
 
 // Product
 @import "product/product";
-
-// Series
-@import "catalog/series";
 
 // Swiper
 @import "swiper";

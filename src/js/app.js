@@ -1,6 +1,8 @@
 import * as flsFunctions from './modules/functions.js';
 import * as burger from './modules/burger.js';
 import * as tabs from './modules/tabs.js';
+import * as catalog from './modules/catalog.js';
+import * as configurator from './modules/configurator.js';
 
 flsFunctions.isWebp()
 
@@ -83,31 +85,6 @@ $(".products__bar-item").on('click', function() {
         $(".products__tab[data-id=" + currentId + "]").addClass('active')
     }
 
-})
-
-// Configurator
-
-$('.catalog__manufacturer').on('click', function() {
-    let id = $(this).attr('data-config-id')
-    $('.configurator[data-id='+ id + ']').toggleClass('active')
-
-    $(this).toggleClass('active')
-})
-
-$(".configurator__item-title").on('click', function() {
-    $(this).parents('.configurator__item').toggleClass('open')
-})
-
-$(".additional__title").on('click', function() {
-    $(this).parents('.additional').toggleClass('open')
-})
-
-$(".configurator__list li").on('click', function() {
-    $(this).toggleClass('checked')
-})
-
-$(".reset").on('click', function() {
-    $(".configurator__list li").removeClass('checked')
 })
 
 // Pagination
@@ -193,7 +170,6 @@ $(".product__swiper .swiper-slide").on('click', function() {
 // Mobile menu
 function hideManufacturers(manufacturers) {
     manufacturers.each(function(index) {
-        console.log(index)
         if (index + 1 > 3) {
             $(`.menumobile .catalog__manufacturer[data-config-id=${index+1}]`).addClass('hidden')
             $(`.menumobile .catalog__manufacturer[data-config-id=${index+1}]`).removeClass('active')
@@ -223,5 +199,37 @@ $('.menumobile__btn').on('click', function() {
         $(this).addClass("menumobile__btn-more")
         $(this).children('span').text("ПОКАЗАТЬ ЕЩЕ")
         hideManufacturers(manufacturers)
+    }
+})
+
+// Category
+function hideSubcategories(subcategories) {
+    subcategories.each(function(index) {
+        if (index + 1 > 3) {
+            $(`.section__category .category__item[data-id=${index+1}]`).addClass('hidden')
+        }
+    })
+}
+
+let subcategories = $(".section__category .category__item")
+let subcategoriesCount = subcategories.length
+if (subcategoriesCount > 3) {
+    $(".category__btn").removeClass('hidden')
+    hideSubcategories(subcategories)
+}
+
+$('.category__btn').on('click', function() {
+    // Open subcategories
+    if ($(this).hasClass("category__btn-more")) {
+        $(this).removeClass("category__btn-more")
+        $(this).addClass("category__btn-hide")
+        $(this).children('span').text("СКРЫТЬ")
+        subcategories.removeClass('hidden')
+    } else if ($(this).hasClass("category__btn-hide")) {
+        // Hide subcategories
+        $(this).removeClass("category__btn-hide")
+        $(this).addClass("category__btn-more")
+        $(this).children('span').text("ПОКАЗАТЬ ЕЩЕ")
+        hideSubcategories(subcategories)
     }
 })
