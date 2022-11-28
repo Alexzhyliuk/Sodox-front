@@ -50,7 +50,7 @@ $(".menu__item-droplist").on('click', function(){
     $(this).toggleClass("active")
 })
 
-$(".header__info-btn").on('click', function() {
+$(".header__info-btn, .subcategory__btn").on('click', function() {
     $(".section__form-contact").addClass('active')
     $("body").addClass('lock')
 })
